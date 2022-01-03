@@ -19,5 +19,5 @@ Additionally, I found myself strengthening skills as a computer scientist as wel
   - That going in with a plan and taking notes along the way is crucial to keep the process organized.
   - Self-motivation to learn more about what I am curious about in a hands-on way.
  
-![Screenshot (126)](https://user-images.githubusercontent.com/88724148/147961040-4b43e3d6-f446-4535-bd1f-d844a3e66992.png)
 ![Screenshot (125)](https://user-images.githubusercontent.com/88724148/147961055-b21ccd96-c25b-4bd7-ac91-9c8273dc9e32.png)
+![Screenshot (126)](https://user-images.githubusercontent.com/88724148/147961040-4b43e3d6-f446-4535-bd1f-d844a3e66992.png)
