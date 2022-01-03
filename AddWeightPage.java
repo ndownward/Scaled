@@ -18,8 +18,6 @@ import java.util.Set;
 public class AddWeightPage extends Activity implements View.OnClickListener{
     private EditText inputWeightView;
     private SharedPreferences sharedPreferences;
-    private long lastClickTime = 28800001;
-    private boolean firstClick = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +40,6 @@ public class AddWeightPage extends Activity implements View.OnClickListener{
 
         //make file for weights and date
         sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-
-        //get timer going
-        final long bootTime = SystemClock.elapsedRealtime();
-        lastClickTime = bootTime;
-
     }
 
     @Override
@@ -54,55 +47,23 @@ public class AddWeightPage extends Activity implements View.OnClickListener{
         switch (view.getId()) {
             case R.id.submitWeightBtn:
 
-                Long timeNow = SystemClock.elapsedRealtime();
-                Long timeElapsed = SystemClock.elapsedRealtime() - lastClickTime;
-                lastClickTime = timeNow;
 
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
                 Map<String, ?> sharedPrefsMap = sharedPreferences.getAll();
 
-                //if key hasn't been added yet
-                if(!sharedPrefsMap.containsKey("time_elapsed")){
-                    //set "time_elapsed" value if it doesn't exist yet
-                    editor.putLong("time_elapsed", 28800000);
-                    editor.commit();
-                }
-                else{
-                    //update total time elapsed since weight last entered
-                    long fullTimeElapsed = sharedPreferences.getLong("time_elapsed", 0);
-                    fullTimeElapsed += timeElapsed;
-                    editor.putLong("time_elapsed", fullTimeElapsed);
-                    editor.commit();
-                }
+                //this will always be a double because of the EditText we used
+                String weight = inputWeightView.getText().toString();
 
-                long timeToCompare = sharedPreferences.getLong("time_elapsed", 0);
-                System.out.println(timeToCompare);
-                if (timeToCompare < 28800000){
-                    long timeToWait = 28800000 - timeToCompare;
-                    int minutes = (int) ((timeToWait / (1000*60)) % 60);
-                    int hours   = (int) ((timeToWait / (1000*60*60)) % 24);
-                    String text = "Please wait " + hours + " hours and " + minutes + " minutes";
-                    Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    editor.putLong("time_elapsed", 0);
-                    editor.commit();
-                    //this will always be a double because of the EditText we used
-                    String weight = inputWeightView.getText().toString();
+                //get date in ms
+                long millis = System.currentTimeMillis();
+                String date = String.valueOf(millis);
 
-                    //get date in ms
-                    long millis=System.currentTimeMillis();
-                    String date = String.valueOf(millis);
+                //put date and weight into records
+                editor.putString(date, weight);
+                editor.commit();
 
-                    //put date and weight into records
-                    editor.putString(date, weight);
-                    editor.commit();
-
-                    Toast.makeText(this, "Weight Submitted!", Toast.LENGTH_SHORT).show();
-                    firstClick = true;
-                }
-
+                Toast.makeText(this, "Weight Submitted!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.seeProgressBtn:
@@ -125,7 +86,6 @@ public class AddWeightPage extends Activity implements View.OnClickListener{
     public void clearData(){
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        //how to clear data
         editor.clear();
         editor.commit();
     }

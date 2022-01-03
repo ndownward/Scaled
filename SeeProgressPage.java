@@ -36,7 +36,6 @@ public class SeeProgressPage extends Activity implements View.OnClickListener {
                 getApplicationContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         Map<String, ?> sharedPrefsMap = getSharedPrefs.getAll();
         Set keysTemp = sharedPrefsMap.keySet();
-        keysTemp.remove("time_elapsed");
         Object[] keys = keysTemp.toArray();
         System.out.println("Keys length: " + keys.length);
 
