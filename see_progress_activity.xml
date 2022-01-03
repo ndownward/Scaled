@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="50dp">
+    android:padding="50dp"
+    android:background="@drawable/dumbbells">
 
-    <com.jjoe64.graphview.GraphView
+<com.jjoe64.graphview.GraphView
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:id="@+id/graph"
@@ -25,14 +26,15 @@
             android:id="@+id/addWeightBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Weight" />
+            android:text="Add Weight"
+            android:backgroundTint="@android:color/holo_blue_light"/>
 
         <Button
             android:id="@+id/mainPageBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back to Home" />
-
+            android:text="Back to Home"
+            android:backgroundTint="@android:color/holo_blue_light"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

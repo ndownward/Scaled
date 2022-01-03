@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/dumbbells">
 
-    <TextView
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/enterWeightText"
         android:text="Enter today's weight in lbs"
-        android:layout_above="@id/timeSensitiveText"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/timeSensitiveText"
-        android:text="You must wait 8h before entering another value"
         android:layout_above="@id/editTxtLinearLayout"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -36,7 +31,9 @@
             android:ems="10"
             android:hint="Enter weight"
             android:inputType="numberDecimal"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:backgroundTint="@android:color/white"
+            android:textColorHint="@android:color/white"/>
 
         <Button
             android:id="@+id/submitWeightBtn"
@@ -44,7 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:text="Submit" />
+            android:text="Submit"
+            android:backgroundTint="@android:color/holo_blue_light"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -62,19 +61,22 @@
         android:id="@+id/clearDataBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear Data" />
+        android:text="Clear Data"
+        android:backgroundTint="@android:color/holo_blue_light"/>
 
     <Button
         android:id="@+id/seeProgressBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="See Progress" />
+        android:text="See Progress"
+        android:backgroundTint="@android:color/holo_blue_light"/>
 
-    <Button
+        <Button
         android:id="@+id/mainPageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Home" />
+        android:text="Back to Home" android:backgroundTint="@android:color/holo_blue_light"/>
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

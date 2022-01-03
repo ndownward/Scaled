@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SeeProgressPage">
+    tools:context=".SeeProgressPage"
+    android:background="@drawable/dumbbells">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,6 +14,9 @@
         android:text="Welcome, user!"
         android:layout_above="@id/btnEnterWeight"
         android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
         />
 
     <Button
@@ -20,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Enter weight"/>
+        android:text="Enter weight"
+        android:backgroundTint="@android:color/holo_blue_light"/>
 
     <Button
         android:id="@+id/btnSeeProgress"
@@ -29,6 +34,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnEnterWeight"
         android:layout_marginTop="20dp"
-        android:text="See progress" />
+        android:text="See progress"
+        android:backgroundTint="@android:color/holo_blue_light"/>
 
 </RelativeLayout>
