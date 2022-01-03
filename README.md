@@ -20,4 +20,4 @@ Additionally, I found myself strengthening skills as a computer scientist as wel
   - Self-motivation to learn more about what I am curious about in a hands-on way.
  
 ![Screenshot (125)](https://user-images.githubusercontent.com/88724148/147961055-b21ccd96-c25b-4bd7-ac91-9c8273dc9e32.png)
-![Screenshot (126)](https://user-images.githubusercontent.com/88724148/147961040-4b43e3d6-f446-4535-bd1f-d844a3e66992.png)
+![Screenshot (128)](https://user-images.githubusercontent.com/88724148/147961554-593831f3-289b-4a96-8ecd-e8f8ba1e839c.png)
