@@ -25,7 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_centerInParent="true"
         android:text="Enter weight"
-        android:backgroundTint="@android:color/holo_blue_light"/>
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/btnSeeProgress"
@@ -35,6 +36,7 @@
         android:layout_below="@id/btnEnterWeight"
         android:layout_marginTop="20dp"
         android:text="See progress"
-        android:backgroundTint="@android:color/holo_blue_light"/>
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>

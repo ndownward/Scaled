@@ -15,8 +15,6 @@
         android:textStyle="bold"
         android:textColor="@android:color/white"/>
 
-
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/editTxtLinearLayout"
         android:layout_width="wrap_content"
@@ -42,7 +40,8 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:text="Submit"
-            android:backgroundTint="@android:color/holo_blue_light"/>
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -62,20 +61,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clear Data"
-        android:backgroundTint="@android:color/holo_blue_light"/>
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/seeProgressBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See Progress"
-        android:backgroundTint="@android:color/holo_blue_light"/>
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"/>
 
         <Button
         android:id="@+id/mainPageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Home" android:backgroundTint="@android:color/holo_blue_light"/>
+        android:text="Back to Home"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_light" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
